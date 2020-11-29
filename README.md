@@ -32,6 +32,7 @@ dicom_server_name = "{server-name}"
 path_to_dicoms_dir = "{path to the folder that includes green-square.dcm and other dcm files}"
 
 base_url = f"https://{dicom_server_name}.azurewebsites.net"
+```
 
 ### Reading in the files
 
@@ -49,7 +50,7 @@ for dir in dirEntries:
         with open(filepath, 'rb') as reader:
             rawfile = reader.read()            
             files[filepath.name] = ('dicomfile', rawfile, 'application/dicom')
-
+```
 
 Then we encoded all the files together and send up to the DICOM server in batches by subdirectory.
 
@@ -63,3 +64,4 @@ Then we encoded all the files together and send up to the DICOM server in batche
     response = client.post(url, body, headers=headers, verify=False)
 
     print('response:', response)
+```
