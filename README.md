@@ -22,7 +22,7 @@ If you're missing the pydicom library it can easily be installed using PIP.
 
 ```python
 pip install pydicom
-
+```
 
 ### Configure user-defined variables to be used throughout
 Replace all variable values wrapped in { } with your own values. Additionally, validate that any constructed variables are correct.  For instance, `base_url` is constructed using the default URL for the service. If you're using a custom URL, you'll need to override that value with your own.
